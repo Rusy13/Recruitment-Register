@@ -1,16 +1,24 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Zach</title>
+    <title>ZACH</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
   </head>
-
   <body>
+
+
+    <% flash.each do |name, message| %>
+      <div class="alert <%= bootstrap_class_for(name)%>">
+        <button class="close" data-bs-dismiss="alert">&times;</button>
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <%= message %>
+      </div>
+    <% end %>
     <%= yield %>
+
   </body>
 </html>
