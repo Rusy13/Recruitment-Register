@@ -2,6 +2,7 @@
 <html>
   <head>
     <title>ZACH</title>
+    <link rel="shortcut icon" href="/home/ubunto/Desktop/LR/zach/favicon.png" type="image/x-icon">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
@@ -11,14 +12,26 @@
   <body>
 
 
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <% if ((usercustomer_signed_in?) || (userexecutor_signed_in?)) %>
+            <li class="nav-item active">
+              <a class="nav-link" href="<%= destroy_usercustomer_session_path %>" method = "DELETE">exit</a>
+            </li>
+          <%end%>
+        </ul>
+      </div>
+    </nav>
+
+    
     <% flash.each do |name, message| %>
       <div class="alert <%= bootstrap_class_for(name)%>">
-        <button class="close" data-bs-dismiss="alert">&times;</button>
+        <%# <button class="close" data-bs-dismiss="alert">&times;</button> %>
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
         <%= message %>
       </div>
     <% end %>
     <%= yield %>
-
   </body>
 </html>

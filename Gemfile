@@ -49,6 +49,14 @@ gem "bootsnap", require: false
 # gem "image_processing", "~> 1.2"
 gem 'devise'
 
+gem 'pg', '~> 1.4', '>= 1.4.5'
+
+gem 'mail', '2.7.1'
+
+gem 'bootstrap', '~> 5.2.2'
+
+
+
 
 
 group :development, :test do
@@ -59,6 +67,9 @@ end
 group :development do
   # Use console on exceptions pages [https://github.com/rails/web-console]
   gem "web-console"
+
+
+  
 
   # Add speed badges [https://github.com/MiniProfiler/rack-mini-profiler]
   # gem "rack-mini-profiler"
