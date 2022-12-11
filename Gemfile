@@ -55,6 +55,7 @@ gem 'mail', '2.7.1'
 
 gem 'bootstrap', '~> 5.2.2'
 
+gem 'tailwindcss-rails', '~> 2.0', '>= 2.0.21'
 
 
 
