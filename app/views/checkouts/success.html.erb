@@ -1,0 +1,13 @@
+<li class="nav-item">
+  <%= link_to "Return", afteregexe_path, class: "nav-link" %>
+</li>
+<div class="container">
+  <h1>You will be contacted shortly!</h1>
+  <br />
+  <% @line_items.each do |item| %>
+    <h3><%= item.description %></h3>
+    <br />
+    <p>$<%= item.price.unit_amount.to_f / 100 %></p>
+    <% product = Stripe::Product.retrieve(item.price.product) %>
+  <% end %>
+</div>

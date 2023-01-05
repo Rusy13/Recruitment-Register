@@ -28,7 +28,7 @@ gem "stimulus-rails"
 gem "jbuilder"
 
 # Use Redis adapter to run Action Cable in production
-# gem "redis", "~> 4.0"
+gem "redis", "~> 4.0"
 
 # Use Kredis to get higher-level data types in Redis [https://github.com/rails/kredis]
 # gem "kredis"
@@ -46,16 +46,29 @@ gem "bootsnap", require: false
 # gem "sassc-rails"
 
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
-# gem "image_processing", "~> 1.2"
+gem "image_processing", "~> 1.2"
+gem "mini_magick"
+
 gem 'devise'
 
 gem 'pg', '~> 1.4', '>= 1.4.5'
 
 gem 'mail', '2.7.1'
 
-gem 'bootstrap', '~> 5.2.2'
+gem 'sass-rails'
 
-gem 'tailwindcss-rails', '~> 2.0', '>= 2.0.21'
+gem 'stripe'
+
+gem "pay", "~> 6.1"
+
+gem 'rspec-rails', '~> 6.0', '>= 6.0.1'
+
+gem 'capybara'
+
+gem 'webdrivers'
+
+gem 'rails-i18n'
+
 
 
 

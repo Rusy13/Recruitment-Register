@@ -1,33 +1,45 @@
-# Files in the config/locales directory are used for internationalization
-# and are automatically loaded by Rails. If you want to use locales other
-# than English, add the necessary files in this directory.
-#
-# To use the locales, use `I18n.t`:
-#
-#     I18n.t "hello"
-#
-# In views, this is aliased to just `t`:
-#
-#     <%= t("hello") %>
-#
-# To use a different locale, set it with `I18n.locale`:
-#
-#     I18n.locale = :es
-#
-# This would use the information in config/locales/es.yml.
-#
-# The following keys must be escaped otherwise they will not be retrieved by
-# the default I18n backend:
-#
-# true, false, on, off, yes, no
-#
-# Instead, surround them with single quotes.
-#
-# en:
-#   "true": "foo"
-#
-# To learn more, please read the Rails Internationalization guide
-# available at https://guides.rubyonrails.org/i18n.html.
-
 en:
-  hello: "Hello world"
+  Customer: "Customer"
+  Executor: "Executor"
+  Chat: "Chat"
+  Personal selection: "Personal selection"
+  Account: "Account"
+  Exit: "Exit"
+  Contacts: "Contacts"
+  Change info about you: "Change info about you"
+  Edit account: "Edit account"
+  View executors: "View executors"
+  User: "User"
+  Name: "Name"
+  Email: "Email"
+  Search: "Search"
+  View customer: "View customer"
+  For questions and suggestions: "For questions and suggestions"
+  Close: "Close"
+  full name: "full name"
+  Inn: "Inn"
+  Add requirement: "Add requirement"
+  Create Portfolio: "Create Portfolio"
+  Search user: "Search user"
+  Search fee: "Search fee"
+  Categories: "Categories"
+  Edit Userexecutor: "Edit Userexecutor"
+  Current password (we need your current password to confirm your changes): "Current password (we need your current password to confirm your changes)"
+  Password confirmation: "Password confirmation"
+  Choose File: "Choose File"
+  Edit Userexecutor: "Edit Userexecutor"
+  Cancel my account: "Cancel my account"
+  Unhappy?: "Unhappy?"
+  Add Executor info: "Add Executor info"
+  Add information: "Add information"
+  Return: "Return"
+  Chose role!: "Chose role!"
+  Go: "Go"
+  open:
+    addinfoexe:
+      name1: "name"
+      inn1: "inn"
+      number1: "number"
+      website1: "website"
+
+

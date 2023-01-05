@@ -1,0 +1,66 @@
+<% if userexecutor_signed_in?%>
+  <div id='chatroom_container' class="row bg-dark text-light">
+    <div id='side_panel' class='col-md-4 col-sm-4'>
+      <li class="nav-item">
+      <%= link_to t("Return"), afteregexe_path, class: "nav-link" %>
+      </li>
+      <h5><%=current_userexecutor.email%></h5>
+      <h4><%=t('User')%></h4>
+      <%= turbo_stream_from 'userexecutors' %>
+      <div id='userexecutors'>
+
+
+        <%if current_userexecutor.role == false %>
+          <%@userexecutors.each do |user|%>
+            <%if user.role == true %>
+              <%=render user%>
+            <%end%>
+          <%end%>
+        <%else%>
+          <%@userexecutors.each do |user|%>
+            <%if user.role == false %>
+              <%=render user%>
+            <%end%>
+          <%end%>
+        <%end%>
+
+
+        </div>
+      </div>
+      <div id='room_container'
+class ='col-md-8 col-sm-8 bg-dark text-light'>
+        <% if @single_room%>
+          <div id='single_room'>
+            <h4 class='text-center'><%=@userexecutor&.email || @single_room.name %></h4>
+            <%= turbo_stream_from @single_room%>
+            <div id='messages' data-controller='scroll'>
+              <%= render @messages%>
+            </div>
+            <%=render 'layouts/new_message_form'%>
+          </div>
+        <%end%>
+      </div>
+    <%else%>
+      <div id='chatroom_container' class="row bg-dark text-light">
+        <div id='side_panel' class='col-md-4 col-sm-4'>
+          <h5><%=current_usercustomer.email%></h5>
+          <h4><%=t('User')%></h4>
+          <%= turbo_stream_from 'usercustomers' %>
+          <div id='usercustomers'>
+            <%=render @usercustomers%>
+          </div>
+        </div>
+        <div id='room_container'
+class ='col-md-8 col-sm-8 bg-dark text-light'>
+          <% if @single_room%>
+            <div id='single_room'>
+              <h4 class='text-center'><%=@usercustomer&.email || @single_room.name %></h4>
+              <%= turbo_stream_from @single_room%>
+              <div id='messages' data-controller='scroll'>
+                <%= render @messages%>
+              </div>
+              <%=render 'layouts/new_message_form'%>
+            </div>
+          <%end%>
+        </div>
+      <%end%>

@@ -1,0 +1,24 @@
+<style>
+div{
+    text-align:center;
+    margin-top:10px;
+    padding: 0px;
+}
+h1{
+    text-align:center;
+    margin-top:15%;
+    padding: 0px;
+}
+</style>
+<li class="nav-item">
+  <%= link_to "Return", afteregexe_path, class: "nav-link" %>
+</li>
+
+<h1>Confirm!</h1>
+
+<div>
+<%= render partial: 'pay/stripe/checkout_button', locals: {
+    session: @checkout_session,
+    title: "Buy now"
+} %>
+</div>

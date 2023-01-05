@@ -10,6 +10,8 @@ module Zach
   class Application < Rails::Application
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 7.0
+    config.active_storage.variant_processor = :mini_magick
+    config.action_mailer.default_url_options = { host: "http://localhost:3000" }
 
     # Configuration for the application, engines, and railties goes here.
     #
@@ -18,5 +20,9 @@ module Zach
     #
     # config.time_zone = "Central Time (US & Canada)"
     # config.eager_load_paths << Rails.root.join("extras")
+
+
+    config.i18n.available_locales = [:en,:ru]
+    config.i18n.default_locale = :en
   end
 end

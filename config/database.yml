@@ -16,12 +16,17 @@ development:
 test:
   <<: *default
   database: zachet_test
+  encoding: unicode
+  host: localhost
+  pool: 5
+  username: postgres
+  password: 1111
 
 
 production:
   <<: *default
   encoding: unicode
-  database: itogovaya_production
+  database: zachet_production
   host: localhost
   pool: 5
   username: postgres

@@ -1,0 +1,6 @@
+
+<tr id="<%= dom_id(contact) %>" data-stream-enter-class="animate-item-in" data-stream-exit-class="animate-item-out">
+  <td><%= link_to contact.full_name, userexecutor_path(contact), data: { turbo_frame: "_top" } %></td>
+  <td><%= contact.inn %></td>
+  <td><%= contact.email %></td>
+</tr>

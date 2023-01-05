@@ -1,0 +1,43 @@
+<nav class="navbar navbar-expand-lg bg-light">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Add Customer info</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Переключатель навигации">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="<%=afteregcus_path%>"> Return </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<%= form_with url: "/addinfocus", data: { behavior: "autosave" }, method: :get do |f| %>
+
+  <div class="form-group">
+    <%= f.label :name1 %><br />
+    <%= f.text_field :name1, autofocus: true, autocomplete: "name", class: "form-control" %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :inn1 %>
+    <%= f.number_field :inn1, autocomplete: "inn", class: "form-control" %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :number1 %>
+    <%= f.text_field :number1, autocomplete: "898185574454", class: "form-control" %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :website1 %><br />
+    <%= f.text_field :website1, autocomplete: "www/leningrad", class: "form-control" %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit "Add information" , data: {turbo: false}, class:"btn btn-primary"%>
+  </div>
+<% end %>

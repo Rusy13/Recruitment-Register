@@ -1,0 +1,22 @@
+    <style>
+
+
+
+    </style>
+
+<table class="table table-zebra mt-0 w-full">
+  <thead>
+    <tr class="w-full2">
+      <th class="text-left">Name</th>
+      <th class="text-left">Inn</th>
+      <th class="text-left">Email</th>
+    </tr>
+  </thead>
+  <tbody id="contacts2-list" data-controller="contacts2" data-action="">
+  <% contacts2.each do |contact2| %>
+    <%= render partial: "contact2", locals: { contact2: contact2 }  %>
+  <% end %>
+  </tbody>
+</table>
+<div class="text-gray-400 mt-4 text-xs text-right" id="contacts2-count">
+</div>

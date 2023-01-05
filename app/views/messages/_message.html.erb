@@ -1,0 +1,12 @@
+<div class="cont-<%=message.userexecutor.id%>">
+  <div class="message-box msg-<%= message.userexecutor.id %>">
+    <div class="d-flex align-items-center">
+      <%= image_tag(message.userexecutor.chat_avatar, class:'chat_pfp') %>
+      <div>
+        <h6 class="name"> <%= message.userexecutor.email %></h6>
+        <p class="time"><%= time_ago_in_words(message.created_at) %> <%=t('ago')%></p>
+      </div>
+    </div>
+    <%= message.body %>
+  </div>
+</div>

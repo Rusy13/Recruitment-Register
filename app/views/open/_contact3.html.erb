@@ -1,0 +1,8 @@
+
+<tr id="<%= dom_id(contact3) %>" data-stream-enter-class="animate-item-in" data-stream-exit-class="animate-item-out">
+  <td><%= contact3.id %></td>
+  <td><%= link_to contact3.full_name, userexecutor_path(contact3), data: { turbo_frame: "_top" } %></td>
+  <td><%= contact3.inn %></td>
+  <td><%= contact3.email %></td>
+  <td><%= button_to "Delete", userexecutor_path(contact3), method: :delete, class: "btn btn-link btn-sm" %></td>
+</tr>
